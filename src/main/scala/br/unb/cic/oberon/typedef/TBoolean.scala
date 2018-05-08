@@ -1,4 +1,4 @@
-package typedef
+package br.unb.cic.oberon.typedef
 
 case class TBoolean() extends Value[Boolean]{
     private var bool: Type[Boolean] = Type[Boolean]("Boolean")

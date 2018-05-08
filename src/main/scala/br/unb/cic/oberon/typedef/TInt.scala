@@ -1,4 +1,4 @@
-package typedef
+package br.unb.cic.oberon.typedef
 
 case class TInt() extends Value[Int]{
     private var integer: Type[Int] = Type[Int]("Int")

@@ -1,4 +1,4 @@
-name := "TOC"
+name := "T.O.C."
 version := "1.0"
 scalaVersion := "2.12.3"
 

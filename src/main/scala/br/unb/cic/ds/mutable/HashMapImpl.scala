@@ -1,4 +1,4 @@
-package ds.mutable
+package br.unb.cic.ds.mutable
 
 /**
   * Uma implementação do tipo Hash Map usando
@@ -100,7 +100,7 @@ class ArrayHashMap[A <: Comparable[A], B: Manifest](private val max: Int = 10) e
         var index = get_position(key)
         if( index >= 0 )
             this.elements(index) = HashMapElement[A,B](key,value)
-        else throw ds.mutable.InvalidArgument("Maximum Capacity Reached")
+        else throw br.unb.cic.ds.mutable.InvalidArgument("Maximum Capacity Reached")
     }
 
     private def locate(start: Int, key: A): Int = {

@@ -1,4 +1,4 @@
-package typedef
+package br.unb.cic.oberon.typedef
 
 case class Type[T <% Comparable[T]](private val name: String) extends Value[T]{
     private var value: T = _

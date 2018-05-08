@@ -1,4 +1,4 @@
-package ds.mutable
+package br.unb.cic.ds.mutable
 
 
 final case class InvalidArgument(private val message: String = "",

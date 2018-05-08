@@ -1,4 +1,4 @@
-package typedef
+package br.unb.cic.oberon.typedef
 
 trait Value[T] {
     
