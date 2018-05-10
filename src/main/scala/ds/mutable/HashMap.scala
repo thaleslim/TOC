@@ -1,4 +1,4 @@
-package br.unb.cic.ds.mutable
+package ds.mutable
 
 /**
   * Hash map é uma estrutura de dados

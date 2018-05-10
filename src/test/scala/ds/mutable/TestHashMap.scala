@@ -1,4 +1,4 @@
-package br.unb.cic.ds.mutable
+package ds.mutable
 
 import org.scalatest.FlatSpec
 import org.scalatest.Matchers

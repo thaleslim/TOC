@@ -1,4 +1,4 @@
-package br.unb.cic.oberon.expression
+package oberon.expression
 
 /** TODO: Until 15/05:
   * Implement::
@@ -24,4 +24,4 @@ trait Value extends Expression{
 
 case class IntValue(value: Integer) extends Value
 case class BoolValue(value: Boolean) extends Value
-case class UndefValue() extends Value
+case class UndefValue(value: Null = null) extends Value

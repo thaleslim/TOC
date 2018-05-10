@@ -1,4 +1,4 @@
-package br.unb.cic.oberon.expression
+package oberon.expression
 
 class VUndefined(var name: String) extends Expression {
     def eval(): Value = UndefValue()
