@@ -47,50 +47,7 @@ class CustomArray[T <% Comparable[T]: Manifest](private val max: Int = 10) exten
     }
     return None
   }
-/*
-  def addAll[B <: T](that: CustomArray[B]): List[T] = {
-    var newCustomArray = new CustomArray[T](this.size + that.size + 1)
 
-    for(i <- 0 until this.length) this.elementAt(i) match {
-        case Some(value) => newCustomArray.insert(i,value)
-        case _ => {}
-    }
-
-    for(idx <- 0 until that.length) that.elementAt(idx) match {
-        case Some(value) => newCustomArray.elementAt(idx) match {
-            case None => newCustomArray.insert(idx, value)
-            case Some(x) => {
-                var iidx = idx + 1
-                var done = false
-                while( iidx < newCustomArray.size && !done ) {
-                    if( newCustomArray.elementAt(idx) != None )
-                        iidx += 1
-                    else
-                        done = true
-                }
-                newCustomArray.elementAt(iidx) match {
-                    case None => newCustomArray.insert(iidx,value)
-                    case _ => throw new InvalidArgument("ooops..... unexpected")
-                }
-            }
-        }
-        case _ => {}
-    }
-
-    var newElements = Array.ofDim[T](newCustomArray.length)
-
-    for(j <- 0 until newCustomArray.length) newCustomArray.elementAt(j) match {
-        case Some(value) => { newElements(j) = value }
-        case _ => {}
-    }
-
-    this.elements = newElements
-
-    this._size = newCustomArray.size
-
-    return newCustomArray
-  }
-*/
   //TODO: Melhorar addAll, knows too much
   def addAll[B <: T](that: List[B]): List[T] = {
     var newCustomArray = new CustomArray[T](this.size + that.size + 1)

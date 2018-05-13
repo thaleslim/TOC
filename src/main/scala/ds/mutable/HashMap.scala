@@ -100,10 +100,10 @@ class HashMap[A <: Comparable[A]: Manifest, B: Manifest](max: Int = 10) extends 
 
     private def insert(key: A, value: B): Unit = {
         /** Inserts a new value.
-          * //TODO: @note if this(index) has the same key the value will be overwritten
+          * @note if this(index) has the same key the value will be overwritten
           * @throws InvalidArgument if this has reached it's storage limit.
           */
-
+        this - (key)
         var index = get_position(key)
         if( index >= 0 )
             this.elements.insert(index, HashMapElement[A,B](key,value))

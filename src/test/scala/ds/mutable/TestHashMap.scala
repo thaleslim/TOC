@@ -22,6 +22,13 @@ class TestHashMap extends FlatSpec with Matchers with GivenWhenThen with BeforeA
     hashMap("one")   should be (Some("um"))
   }
 
+  it should "be able to update the value previously mapped by using it's access key" in {
+    hashMap("one" -> "dois")
+    hashMap("one")   should be (Some("dois"))
+    hashMap("one" -> "um")
+    hashMap("one")   should be (Some("um"))
+  }
+
   it should "have hashMap(\"one\") = Some(\"um\") after HashMap += (\"one\" -> \"um\") has been executed" in {
     hashMap += ("one" -> "um")
     hashMap("one")   should be (Some("um"))
@@ -32,7 +39,7 @@ class TestHashMap extends FlatSpec with Matchers with GivenWhenThen with BeforeA
     hashMap("one")   should be (Some("um"))
     hashMap("two")   should be (Some("dois"))
   }
-  
+
 // TODO: Extra, implement a implicit conversion
 //   it should "be able to retrive the values inserted through the + operation in sequence" in {
 //     hashMap += ("one" -> "um") + ("two" -> "dois")
@@ -63,7 +70,7 @@ class TestHashMap extends FlatSpec with Matchers with GivenWhenThen with BeforeA
     hashMap - ("one")
     hashMap("one") should be (None)
   }
-
+    //TODO: overcome this behaviour. Now by using the CustomArray we can resize the map
   it should "throw a Exception if you try to insert more elements than previously informed to the class' constructor" in {
     hashMap("one" -> "um", "two" -> "dois", "three" -> "três", "four" -> "quatro")
     
